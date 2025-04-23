@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: screenshot-tool-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && node index.js
+    repo: https://github.com/yourusername/screenshot-tool
+    branch: main
+    autoDeploy: true
