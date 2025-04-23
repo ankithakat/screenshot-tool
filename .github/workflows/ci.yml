@@ -1,0 +1,25 @@
+name: screenshot-tool-pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install server deps
+        run: cd server && npm install
+
+      - name: Install client deps
+        run: cd client && npm install
+
+      - name: Build check
+        run: cd client && npm run build
