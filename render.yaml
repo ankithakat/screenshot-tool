@@ -5,6 +5,6 @@ services:
     plan: free
     buildCommand: cd server && npm install
     startCommand: cd server && node index.js
-    repo: https://github.com/yourusername/screenshot-tool
+    repo: https://github.com/ankithakat/screenshot-tool
     branch: main
     autoDeploy: true
