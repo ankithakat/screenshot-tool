@@ -9,7 +9,7 @@ function App() {
   const [response, setResponse] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/ping')
+    axios.get('https://screenshot-tool-backend.onrender.com/api/ping')
     .then(resp => setResponse(resp.data.message));
   }, []);
 
